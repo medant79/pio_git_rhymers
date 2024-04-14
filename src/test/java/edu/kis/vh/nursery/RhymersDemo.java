@@ -8,25 +8,25 @@ class RhymersDemo {
     public static void main(String[] args) {
         Rhymersfactory factory = new DefaultRhymersFactory();
         
-        defaultcountingoutrhymer[] rhymers = { factory.GetStandardRhymer(), factory.GetFalseRhymer(),
+        DefaultCountingOutRhymer[] rhymers = { factory.GetStandardRhymer(), factory.GetFalseRhymer(),
                 factory.GetFIFORhymer(), factory.GetHanoiRhymer()};
         
         for (int i = 1; i < 15; i++)
             for (int j = 0; j < 3; j++)
-                rhymers[j].countin(i);
+                rhymers[j].countIn(i);
         
         java.util.Random rn = new java.util.Random();
         for (int i = 1; i < 15; i++)
-            rhymers[3].countin(rn.nextInt(20));
+            rhymers[3].countIn(rn.nextInt(20));
         
         for (int i = 0; i < rhymers.length; i++) {
-            while (!rhymers[i].callcheck())
-                System.out.print(rhymers[i].countout() + "  ");
+            while (!rhymers[i].callCheck())
+                System.out.print(rhymers[i].countOut() + "  ");
             System.out.println();
         }
         
         System.out.println("total rejected is "
-                + ((hanoirhymer) rhymers[3]).reportrejected());
+                + ((HanoiRhymer) rhymers[3]).reportRejected());
         
     }
     
