@@ -5,16 +5,16 @@ public class fiforhymer extends defaultcountingoutrhymer {
     public defaultcountingoutrhymer temp = new defaultcountingoutrhymer();
     
     @Override
-    public int countOut() {
-        while (!callCheck())
+    public int countout() {
+        while (!callcheck())
             
-            temp.countIn(super.countOut());
+            temp.countin(super.countout());
         
-        int ret = temp.countOut();
+        int ret = temp.countout();
         
-        while (!temp.callCheck())
+        while (!temp.callcheck())
             
-            countIn(temp.countOut());
+            countin(temp.countout());
         
         return ret;
     }
