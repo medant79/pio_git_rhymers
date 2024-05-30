@@ -17,7 +17,7 @@ public class DefaultCountingOutRhymer {
     }
 
     public boolean callCheck() {
-        return total == -1;
+        return total == CALL_CHECK_VALUE;
     }
 
     public int getTotal() {
@@ -25,18 +25,18 @@ public class DefaultCountingOutRhymer {
     }
 
     public boolean isFull() {
-        return total == 11;
+        return total == ARRAY_FULL;
     }
         
     protected int peekaboo() {
         if (callCheck())
-            return -1;
+            return DEFAULT_RETURN;
         return numbers[total];
     }
             
     public int countOut() {
         if (callCheck())
-            return -1;
+            return DEFAULT_RETURN;
         return numbers[total--];
     }
 
