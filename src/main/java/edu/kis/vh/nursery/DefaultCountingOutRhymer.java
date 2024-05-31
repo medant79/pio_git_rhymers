@@ -3,6 +3,7 @@ package edu.kis.vh.nursery;
 public class DefaultCountingOutRhymer {
 
     public static final int DEFAULT_RETURN = -1;
+    
     public static final int MAX_SIZE = 12;
     public static final int ARRAY_FULL = MAX_SIZE - 1;
     public static final int TOTAL_DEFAULT_VALUE = -1;
