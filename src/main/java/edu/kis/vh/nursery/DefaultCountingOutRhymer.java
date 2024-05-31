@@ -20,7 +20,11 @@ public class DefaultCountingOutRhymer {
     public boolean callCheck() {
         return total == CALL_CHECK_VALUE;
     }
-        
+
+    public int getTotal() {
+        return total;
+    }
+
     public boolean isFull() {
         return total == ARRAY_FULL;
     }
